@@ -34,5 +34,6 @@ Bring the backend in the browser - WIP
 
 ## Requirements
 
-- **Deno** as the runtime environment.
-- Modern browser with JavaScript enabled.
+- **Deno** as the runtime environment,
+- Modern browser with JavaScript enabled,
+- [Just](https://github.com/casey/just) command runner.
