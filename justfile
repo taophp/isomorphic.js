@@ -1,25 +1,25 @@
 set dotenv-load
 
 default:
-  just --list
+  @just --list
 
 boot:
-  deno run --allow-net --allow-read --allow-env src/server/main.ts &
-  sleep 1
+  @deno run --allow-net --allow-read --allow-env src/server/main.ts &
+  @sleep 1
 
 start:
-  just boot
-  firefox http://$DOMAIN:$PORT
+  @just boot
+  @firefox http://$DOMAIN:$PORT
 
 stop:
-  killall deno
+  @killall deno
 
 restart:
-  just stop
-  just start
+  @just stop
+  @just start
 
 
 test:
-  just stop
-  just boot
-  curl http://$DOMAIN:$PORT
+  @just stop
+  @just boot
+  @curl http://$DOMAIN:$PORT
